@@ -5,7 +5,6 @@ from pymongo import MongoClient
 from datetime import datetime
 # from upstash_redis import Redis
 
-# Use environment variables for cloud DB/Broker URLsfrom upstash_redis import Redis
 
 
 REDIS_URL = os.getenv("REDIS_URL", "rediss://default:AUgtAAIncDE0MWZiYWZmZDdlYjE0MTUxYjBmMWMyMWFlMDYzOGQwY3AxMTg0Nzc@busy-koi-18477.upstash.io:6379") #redis-cli --tls -u redis://default:AUgtAAIncDE0MWZiYWZmZDdlYjE0MTUxYjBmMWMyMWFlMDYzOGQwY3AxMTg0Nzc@busy-koi-18477.upstash.io:6379
