@@ -46,6 +46,6 @@ Interactive Swagger documentation is available at [http://127.0.0.1:8000/docs](h
 
 ## Deployments 
 
-- For Fast api project I am using Railway to deploy beacuse it support working t run with it unlike vercel 
+- For FastAPI project I am using Railway to deploy beacuse it support worker and FastAPI to run Simultaneously in it (unlike vercel)
 - for Redis upstash [https://upstash.com/](upstash)
 - For database Serverless mongoDb is alredy being used  
