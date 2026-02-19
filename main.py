@@ -41,6 +41,9 @@ async def health_check():
 
 @app.post("/v1/webhooks/transactions", status_code=status.HTTP_202_ACCEPTED) 
 async def handle_webhook(webhook: TransactionWebhook, background_tasks: BackgroundTasks):
+
+    if not webhook.transaction_id:
+        raise HTTPException(status_code=400, detail="invalid data  in Body")
     
     existing = await db.transactions.find_one(
         {"transaction_id": webhook.transaction_id},
