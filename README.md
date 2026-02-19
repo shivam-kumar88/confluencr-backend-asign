@@ -41,3 +41,11 @@ By offloading the 30-second delay to Celery , the service guarantees high availa
 
 # Automatic Documentation: 
 Interactive Swagger documentation is available at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+
+
+## Deployments 
+
+- For Fast api project I am using Railway to deploy beacuse it support working t run with it unlike vercel 
+- for Redis upstash [https://upstash.com/](upstash)
+- For database Serverless mongoDb is alredy being used  
