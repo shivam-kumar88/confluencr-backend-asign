@@ -24,11 +24,11 @@ db = mongo_client.transaction_db
 db.command("ping")
 print("MongoDB worker connection ready")
 
-celery_app = Celery("tasks", broker=REDIS_URL, worker_pool="solo")  
+celery_app = Celery("tasks", broker=REDIS_URL)  
 
 @celery_app.task(name="process_transaction")
 def process_transaction_task(transaction_id: str):
-    time.sleep(30)  
+    time.sleep(29)  
     
     db.transactions.update_one(
         {"transaction_id": transaction_id},
