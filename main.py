@@ -84,4 +84,4 @@ async def get_transaction(transaction_id: str):
         raise HTTPException(status_code=404, detail="Transaction not found")
     
     txn.pop("_id", None)
-    return txn
+    return [txn]
