@@ -28,7 +28,7 @@ celery_app = Celery("tasks", broker=REDIS_URL)
 
 @celery_app.task(name="process_transaction")
 def process_transaction_task(transaction_id: str):
-    time.sleep(29)  
+    time.sleep(30)  
     
     db.transactions.update_one(
         {"transaction_id": transaction_id},
